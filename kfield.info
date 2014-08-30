@@ -1,0 +1,14 @@
+name = Kfield
+description = Provide common field bases.
+core = 7.x
+package = Keatures
+version = 7.x-0.1
+project = kfield
+dependencies[] = features
+dependencies[] = file
+dependencies[] = image
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = field_file
+features[field_base][] = field_image
