@@ -7,6 +7,7 @@ project = kfield
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = file
+dependencies[] = filefield_paths
 dependencies[] = image
 dependencies[] = list
 dependencies[] = text
