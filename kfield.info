@@ -11,6 +11,7 @@ dependencies[] = filefield_paths
 dependencies[] = image
 dependencies[] = list
 dependencies[] = text
+dependencies[] = variable
 features[features_api][] = api:2
 features[field_base][] = body
 features[field_base][] = field_file
