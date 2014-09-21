@@ -4,6 +4,35 @@
  * Drupal module main file.
  */
 
+// ============================================================================
+
+/**
+ * Load taxonomy term(s) by name in specific vocabulary.
+ */
+function kfield_taxonomy_term_entity_query($vocab, $term) {
+  if (is_string($vocab)) {
+    $vocab = taxonomy_vocabulary_machine_name_load($vocab);
+  }
+  else if (is_numeric($vocab)) {
+    $vocab = taxonomy_vocabulary_load($vocab);
+  }
+
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'taxonomy_term')
+    ->propertyCondition('vid', $vocab->vid)
+    ->propertyCondition('name', $term);
+  $result = $query->execute();
+  $terms = array();
+  if (!empty($result['taxonomy_term'])) {
+    $ids = array_keys($result['taxonomy_term']);
+    $terms = entity_load('taxonomy_term', $ids);
+  }
+
+  return $terms;
+}
+
+// ============================================================================
+
 function kfield_add_field_body($entity_type, $bundle, $label = 'Body') {
   $field_name = 'field_body';
   $field = field_info_field($field_name);
