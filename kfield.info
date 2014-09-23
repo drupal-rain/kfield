@@ -9,6 +9,7 @@ dependencies[] = features
 dependencies[] = file
 dependencies[] = filefield_paths
 dependencies[] = image
+dependencies[] = jquery_update
 dependencies[] = list
 dependencies[] = text
 dependencies[] = variable
