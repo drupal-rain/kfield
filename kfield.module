@@ -4,6 +4,8 @@
  * Drupal module main file.
  */
 
+include_once 'kfield.formatter.inc';
+
 // ============================================================================
 
 /**
