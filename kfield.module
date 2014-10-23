@@ -102,6 +102,11 @@ function kfield_mod_field_instance($entity_type, $bundle, $field_name, array $fi
   field_update_instance($instance);
 }
 
+// @todo
+function kfield_mod_field_extra() {
+
+}
+
 // =============================================================================
 
 /**
@@ -129,7 +134,8 @@ function kfield_taxonomy_term_entity_query($vocab, $term) {
   return $terms;
 }
 
-// ============================================================================
+// =============================================================================
+// @deprecating
 
 function kfield_add_field_body($entity_type, $bundle, $label = 'Body') {
   $field_name = 'field_body';
